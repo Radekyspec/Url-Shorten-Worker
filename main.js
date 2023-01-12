@@ -137,7 +137,7 @@ function deleteShortUrl(delKeyPhrase) {
   fetch(window.location.pathname, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ cmd: "del", keyPhrase: delKeyPhrase, password: document.querySelector("#passwordText").value })
+    body: JSON.stringify({ cmd: "del", keyPhrase: delKeyPhrase })
   }).then(function (response) {
     return response.json();
   })
